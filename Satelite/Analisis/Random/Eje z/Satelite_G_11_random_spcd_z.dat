@@ -57,7 +57,7 @@ RBE2     860000  859999  123456     1        2      3       4       5
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $ Referenced Coordinate Frames
 $
-INCLUDE '..\..\Satelite_G11.bdf'
+INCLUDE '..\..\..\Satelite_G11.bdf'
 $
 ENDDATA 
 
