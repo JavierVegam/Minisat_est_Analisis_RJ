@@ -1,0 +1,35 @@
+$ MSC.Nastran input file created on April     30, 2021 at 13:27:37 by
+$ Patran 2020  (Student Edition)
+$ Direct Text Input for Nastran System Cell Section
+$ Direct Text Input for File Management Section
+$ Direct Text Input for Executive Control
+$ Normal Modes Analysis, Database
+SOL 103
+CEND
+$ Direct Text Input for Global Case Control Data
+TITLE = MSC.Nastran job created on 23-Apr-21 at 13:54:50
+ECHO = NONE
+$ Using Nastran default values for RESVEC
+SUBCASE 1
+   SUBTITLE=LoadCase
+   METHOD = 1
+   SPC = 2
+   WEIGHTCHECK(PRINT,SET=ALL) = YES
+   VECTOR(PLOT,SORT1,REAL)=ALL
+   MEFFMASS(SUMMARY,PARTFAC,MEFFM,FRACSUM)
+$ Direct Text Input for this Subcase
+BEGIN BULK
+$ Direct Text Input for Bulk Data
+PARAM    POST    0
+PARAM   PRTMAXIM YES
+EIGRL    1       0.      2000.            0
+
+$ Loads for Load Case : LoadCase
+SPCADD   2       1
+$ Displacement Constraints of Load Set : SPC_123456
+SPC1     1       123456  1       THRU    12
+
+$
+INCLUDE '..\..\Satelite_G11.bdf'
+$
+ENDDATA 
