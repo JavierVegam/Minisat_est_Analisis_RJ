@@ -1,0 +1,36 @@
+$# Session file patran.ses.01 started recording at 05-Jun-21 21:07:21
+$# Build: 26.0.758311 Tue Sep 15 10:33:18 PDT 2020
+$# Recorded by: Patran 2020  (Student Edition)
+uil_file_open.go( "C:\Users\Rafa\Documents\GitHub\Minisat_est_Analisis_RJ\" // @
+"Satelite\Satelite_G11.db" )
+$# Acknowledgement requested from application Database
+$#     There is a problem attempting to open the database you have specified.
+$#  Database Name: 
+$# C:\Users\Rafa\Documents\GitHub\Minisat_est_Analisis_RJ\Satelite\Satelite_G1
+$# 1.db
+$#  Product Version: 2020  26.0.758311
+$#  Database Engine Version: pdb.1.0.C15
+$#  Schema Version: PATRAN_3_21
+$#  Last Used On Platform: Windows 64-bit
+$#  
+$#  Acknowledge this message for possible further information about why this 
+$# database cannot be opened.
+$? NO 13100029 
+$# Error reported in application APP by application Database
+$#     Could not open database file. May lack necessary file permissions or 
+$# may be locked by another process. Cannot continue.
+$? NO 13000239 
+$# FLEXlm initialization complete.  Acquiring license(s)...
+$# License File: EDU
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node LAPTOP-9T8JDH3K(
+$# 548ca0d8b6e5) (Windows 6.2 (Build 9200: Service Pack 0)) at 05-Jun-21 
+$# 21:07:34.
+$# Begin Reading RMB Menu definitions
+$# Done Reading RMB Menu definitions
+$# Loading dynamic library C:\Program 
+$# Files\MSC.Software\NaPa_SE\2020\Patran\bin\exe\loads_browser.dll
+$# ач : shared library 'Loads Browser', Version 2020, Revision 3, Patch 0, 
+$# has been loaded for: MSC.Patran.
+uil_file_close.goquit(  )
+$# Session file patran.ses.01 stopped recording at 05-Jun-21 21:07:36

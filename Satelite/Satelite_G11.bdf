@@ -1,8 +1,7 @@
 
 $ Elements and Element Properties for region : 1D_Al7075_Rig_int
 PBARL    1       1               BAR
-*        9.2600001-4     .03             0.
-*
+         .0013   .03     0.
 $ Pset: "1D_Al7075_Rig_int" will be imported as: "pbarl.1"
 CBAR     1879    1       2596    1005    0.      0.      1.
                          0.      0.      -.01525 0.      0.      -.01525
