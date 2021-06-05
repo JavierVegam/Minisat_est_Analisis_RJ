@@ -18,8 +18,8 @@ SUBCASE 1
     SET 102 = 1 THRU 12
             $ 2021,2022,2023,2024,2031,2032,2033,2034,
             $ 2041,2042,2043,2044,2051,2052,2053,2054
-   $SPCFORCES(SORT1,PHASE)=ALL
-   $FORCES(SORT1,PHASE)=102
+   SPCFORCES(SORT1,PHASE)=ALL
+   FORCES(SORT1,PHASE)=102
    STRESS(PLOT,SORT1,REAL,VONMISES,BILIN)=ALL
 SUBCASE 2
  $Subcase name : QStatic_Y
@@ -31,8 +31,8 @@ SUBCASE 2
    SET 102 = 1 THRU 12
             $ 2021,2022,2023,2024,2031,2032,2033,2034,
              $ 2041,2042,2043,2044,2051,2052,2053,2054
-   $SPCFORCES(SORT1,PHASE)=ALL
-   $FORCES(SORT1,PHASE)=102
+   SPCFORCES(SORT1,PHASE)=ALL
+   FORCES(SORT1,PHASE)=102
    STRESS(PLOT,SORT1,REAL,VONMISES,BILIN)=ALL  
 SUBCASE 3
  $Subcase name : QStatic_Z
@@ -44,8 +44,8 @@ SUBCASE 3
    SET 102 = 1 THRU 12
              $ 2021,2022,2023,2024,2031,2032,2033,2034,
              $ 2041,2042,2043,2044,2051,2052,2053,2054
-   $SPCFORCES(SORT1,PHASE)=ALL
-   $FORCES(SORT1,PHASE)=102
+   SPCFORCES(SORT1,PHASE)=ALL
+   FORCES(SORT1,PHASE)=102
    STRESS(PLOT,SORT1,REAL,VONMISES,BILIN)=ALL    
 BEGIN BULK
 $ Direct Text Input for Bulk Data
@@ -61,11 +61,11 @@ $ Displacement Constraints of Load Set : SPC_123456
 SPC1     1       123456  1       THRU    12
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $ Gravity Loading of Load Set : QStatic_69.3gOoP
-GRAV     2              50.      1.      0.     0.
+GRAV     2               6.      1.      0.     0.
 $ Gravity Loading of Load Set : QStatic_69.3gIP_0deg
-GRAV     3              50.      0.      1.     0.
+GRAV     3               6.      0.      1.     0.
 $ Gravity Loading of Load Set : QStatic_69.3gIP_90deg
-GRAV     4              80.      0.      0.     1.
+GRAV     4              13.      0.      0.     1.
 $------$$------$$------$$------$$------$$------$$------$$------$$------$$------$
 $
 INCLUDE '..\..\Satelite_G11.bdf'
