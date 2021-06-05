@@ -2325,7 +2325,7 @@ CONM2    4000    4000    0       11.     0.      0.      0.
          0.      0.      0.      0.      0.      0.
 $ Elements and Element Properties for region : 1D_Interiores
 PBARL    5       1               BAR
-*        7.5000001-4     .03             0.
+*        6.9999998-4     .03             0.
 *
 $ Pset: "1D_Interiores" will be imported as: "pbarl.5"
 CBAR     55055   5       54027   54071   0.      0.      1.
