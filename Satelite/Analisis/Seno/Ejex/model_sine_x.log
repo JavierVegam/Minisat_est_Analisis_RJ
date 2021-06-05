@@ -15,8 +15,8 @@ symbol=DELDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/
 symbol=DEMODIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/demo' $(program default)
 symbol=SSSALTERDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/sssalter' $(program default)
 symbol=TPLDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/tpl' $(program default)
-SDIR='c:/scratch/model_sine_x.T11056_36'
-DBS='c:/scratch/model_sine_x.T11056_36'
+SDIR='c:/scratch/model_sine_x.T14608_27'
+DBS='c:/scratch/model_sine_x.T14608_27'
 SCR='yes'
 SMEM=100
 BPOOL=150
@@ -46,9 +46,9 @@ FPE:         yes
 ----------------------------------------------------------------- 
 Current resource limits:
  Physical memory:                    12205 MB
- Physical memory available:           5659 MB
+ Physical memory available:           5959 MB
  Paging file size:                   14061 MB
- Paging file size available:          7360 MB
+ Paging file size available:          7054 MB
  Virtual memory:                 134217727 MB
  Virtual memory available:       134213511 MB
 ----------------------------------------------------------------- 
@@ -56,7 +56,7 @@ System configuration:
  Hostname:         LAPTOP-9T8JDH3K
  Architecture:     win64i8
  Platform:         Intel Windows 10 Home 6.2 9200 (Windows Compute Cluster)
- Model:            Xeon/3043
+ Model:            Xeon/3033
  Clock freq.:      3043 MHz
  Number of CPUs:   4
  Executable:       standard
@@ -70,8 +70,8 @@ System configuration:
  Remote shell cmd: "c:/program files/msc.software/napa_se/2020/nastran/msc20200/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
                    <ccs_cmd> (Windows CCS nodes)
 ----------------------------------------------------------------- 
-MSC Nastran started  Sat Jun  5 18:19:36 Hdvr 2021 
- 18:19:38  Beginning Analysis
+MSC Nastran started  Sat Jun  5 19:25:27 Hdvr 2021 
+ 19:25:29  Beginning Analysis
 SCA Kernel 24.7.714370 successfully initialized
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\libimalloc.dll" has been loaded.
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_core.dll" has been loaded.
@@ -79,14 +79,14 @@ BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\wi
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_rt.dll" has been loaded.
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\MSCblas.dll" has been loaded.
 
- 18:19:38  MSC Authorization Information - Checkout Successful (1016, 0)
- 18:19:38  -------------------------------------------------------------
- 18:19:38  Acquired 1 license for Student Edition Nastran
+ 19:25:29  MSC Authorization Information - Checkout Successful (1016, 0)
+ 19:25:29  -------------------------------------------------------------
+ 19:25:29  Acquired 1 license for Student Edition Nastran
 
 
- 18:19:38  MSC Authorization Information - System Attributes (1004, 0)
- 18:19:38  -----------------------------------------------------------
-  Date:          Sat Jun  5 18:19:38 2021
+ 19:25:29  MSC Authorization Information - System Attributes (1004, 0)
+ 19:25:29  -----------------------------------------------------------
+  Date:          Sat Jun  5 19:25:29 2021
   LAPI Version:  LAPI 10.6.4 (CL 714361) (FLEXlm 11.16.3.0)
   License Mode:  Student Edition
 
@@ -94,56 +94,56 @@ BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\wi
   * * * * * * * * * * * * * * * * * * * *
   * *                                 * *
   * *   MSC Customer Entitlement ID   * *
-  * *        f412fd60-GF5962E4        * *
+  * *        f412fd60-G4C4C2EA        * *
   * *                                 * *
   * * * * * * * * * * * * * * * * * * * *
   * * * * * * * * * * * * * * * * * * * *
 
- 18:19:38  MSC Authorization Information - Checkout Successful (1016, 0)
- 18:19:38  -------------------------------------------------------------
- 18:19:38  Acquired 1 license for Student Edition Nastran Dynamics
+ 19:25:29  MSC Authorization Information - Checkout Successful (1016, 0)
+ 19:25:29  -------------------------------------------------------------
+ 19:25:29  Acquired 1 license for Student Edition Nastran Dynamics
 
 
 Beginning bulk data processing using the IFPStar component.
 For more information on IFPStar, please see KB article KB8019200
 on our support pages, at http://simcompanion.mscsoftware.com.
 
- 18:19:38  Reading INCLUDE file "..\..\..\Satelite_G11.bdf"
- 18:19:38  14863 records read from INCLUDE file "..\..\..\Satelite_G11.bdf"
- 18:19:38  54 records read from JID file "c:/users/rafa/documents/github/minisat_est_analisis_rj/satelite/analisis/seno/ejex/model_sine_x.dat"
- 18:19:38  A total of 14917 records were read from 2 files.
+ 19:25:29  Reading INCLUDE file "..\..\..\Satelite_G11.bdf"
+ 19:25:29  14847 records read from INCLUDE file "..\..\..\Satelite_G11.bdf"
+ 19:25:29  54 records read from JID file "c:/users/rafa/documents/github/minisat_est_analisis_rj/satelite/analisis/seno/ejex/model_sine_x.dat"
+ 19:25:29  A total of 14901 records were read from 2 files.
 
 Processing of bulk data entries is complete.
 
- 18:19:39  Analysis started.
- 18:19:39  Geometry access/verification to CAD part initiated (if needed).
- 18:19:39  Geometry access/verification to CAD part successfully completed (if needed).
- 18:19:39  Finite element model generation started.
- 18:19:39  Finite element model generated 21408 degrees of freedom.
- 18:19:39  Finite element model generation successfully completed.
- 18:19:39  Application of Loads and Boundary Conditions to the finite element model started.
- 18:19:39  Application of Loads and Boundary Conditions to the finite element model successfully completed.
- 18:19:40  Solution of the system equations for normal modes started.
- 18:19:41  Solution of the system equations for normal modes successfully completed.
+ 19:25:30  Analysis started.
+ 19:25:30  Geometry access/verification to CAD part initiated (if needed).
+ 19:25:30  Geometry access/verification to CAD part successfully completed (if needed).
+ 19:25:30  Finite element model generation started.
+ 19:25:30  Finite element model generated 21408 degrees of freedom.
+ 19:25:30  Finite element model generation successfully completed.
+ 19:25:30  Application of Loads and Boundary Conditions to the finite element model started.
+ 19:25:30  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 19:25:30  Solution of the system equations for normal modes started.
+ 19:25:31  Solution of the system equations for normal modes successfully completed.
 
- 18:19:42  MSC Authorization Information - Checkout Successful (1016, 0)
- 18:19:42  -------------------------------------------------------------
- 18:19:42  Acquired 1 license for Student Edition Nastran Dynamics
+ 19:25:32  MSC Authorization Information - Checkout Successful (1016, 0)
+ 19:25:32  -------------------------------------------------------------
+ 19:25:32  Acquired 1 license for Student Edition Nastran Dynamics
 
- 18:19:43  Solution of the system equations for frequency response started.
- 18:19:43  Solution of the system equations for frequency response successfully completed.
- 18:19:48  Frequency response analysis completed.
+ 19:25:32  Solution of the system equations for frequency response started.
+ 19:25:32  Solution of the system equations for frequency response successfully completed.
+ 19:25:34  Frequency response analysis completed.
  ================================================== 
  Warning/Fatal Message Summary           Occurrence
        USER WARNING MESSAGE     6644.1          1 
        USER WARNING MESSAGE     7697.0          1 
  ================================================== 
- 18:19:49  23 records read from JID file "c:/users/rafa/documents/github/minisat_est_analisis_rj/satelite/analisis/seno/ejex/model_sine_x.dat"
- 18:19:49  NSEXIT: EXIT(0)
- 18:19:49  Analysis complete  0
-Real:       11.196 seconds ( 0:00:11.196)
-User:        3.546 seconds ( 0:00:03.546)
-Sys:         1.375 seconds ( 0:00:01.375)
+ 19:25:34  23 records read from JID file "c:/users/rafa/documents/github/minisat_est_analisis_rj/satelite/analisis/seno/ejex/model_sine_x.dat"
+ 19:25:34  NSEXIT: EXIT(0)
+ 19:25:34  Analysis complete  0
+Real:        5.511 seconds ( 0:00:05.511)
+User:        3.765 seconds ( 0:00:03.765)
+Sys:         1.296 seconds ( 0:00:01.296)
  ==================================================
  OS:                           6.2
  OEM ID:                       9
@@ -161,13 +161,13 @@ Sys:         1.375 seconds ( 0:00:01.375)
  ==================================================
  Time Summary                 CPU       Wall   ( Time in Seconds )
  Eigenvalue                   1.0          1 
- Miscellaneous                3.6          9 
+ Miscellaneous                3.7          4 
  -------------------------------------------
- Total:                       4.6         10 
+ Total:                       4.7          5 
  ==================================================
  Consider using SOLVE=AUTO if you have not.
  =====================================================
  Detailed performance information can be found in the 
  "MSC Nastran High Performance Computing User's Guide"
  =====================================================
-MSC Nastran finished Sat Jun  5 18:19:49 Hdvr 2021 
+MSC Nastran finished Sat Jun  5 19:25:34 Hdvr 2021 
