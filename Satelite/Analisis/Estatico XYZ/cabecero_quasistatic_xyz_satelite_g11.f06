@@ -1,0 +1,591 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2020 MSC Software Corporation and its licensors. All rights reserved.         
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           MSC Software          * *
+                                              * *               CORP              * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *  S T U D E N T   E D I T I O N  * *
+                                              * *                                 * *
+                                              * *     Version 2020SP1-CL749017    * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          AUG  4, 2020           * *
+                                              * *                                 * *
+                                              * *              Intel              * *
+                                              * *MODEL Xeon/3216 (LAPTOP-53F8OSPS * *
+                                              * *    Windows 10 Home 6.2 9200     * *
+                                              * * Compiled for 8664 (SINGLE Mode) * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+
+ 
+ 
+                                                 This Student Edition version is  
+                                                    valid until APR 30, 2022.     
+ 
+ 
+                  This program is being distributed as part of the MSC Software Student Edition. Use of this program 
+                     or its results at a commercial installation, for commercial purposes, or for production work    
+                                             I S   S T R I C T L Y  P R O H I B I T E D.                             
+                  ==================================== FOR EDUCATIONAL USE ONLY =====================================
+ 
+ 
+1News file - July 31, 2020)
+  
+               Welcome to MSC Nastran 2020 Service Pack 1 (2020 SP1)
+  
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions.
+  
+     MSC Nastran 2020 SP1 corrects four defects, evident in version 2020,
+     that concern the import of Nastran Embedded Fatigue and acoustic pressure
+     results into Patran, corrects a licensing defect concerning the
+     TABLRPC entry, and shell elements SFRP failure indicator output in
+     the Digimat-to-SOL 400 MATDIGI interface.
+  
+     MSC Nastran 2020 SP1 Features and Enhancements
+  
+     Dynamics
+     - Data recovery of Poroelastic material (PEM) trim parts interior grids.
+     - New PLTSURF entry introduced for easier PEM parts coupling surface
+       defintions.
+     - Restart support for models with invariant PEM components.
+     - Temperature dependency added for frequency dependent materials.
+     - SOL 108 (direct frequency response) support added for models with PEM
+       parts.
+  
+     Rotordynamics
+     - New 2D Bush (CBUSH2DA) and Squeeze File Damper (NLRSFDA) user-defined
+       subroutines enabled to include inertia & acceleration terms respectively.
+     - Integration of user-defined squeeze file damper libraries.
+     - Cross-coupling inertia terms specification for 2D Bush (CBUSH2D) element.
+     - Frequency dependent 2D Bush (PBSH2DT) property with tabular input.
+  
+     Composites
+     - Layered Solid and Solid-Shell elements available in linear solutions.
+  
+     Fatigue
+     - Control of the number of angles to be analyzed when using critical plane
+       analysis.
+     - New stress/strain output requests via FATIGUE case control.
+     - More control over the amound of results data returned at critical
+       locations.
+     - Significant performance improvement of SOL 112 duty cycle jobs.
+     - Direct access to dynamic load data in multi-channel time histroy files via
+       new TABLRPC entry.
+  
+     Topology Optimization
+     - Anisotropic materials support added.
+     - Over-hang constraints for additive manufacturing.
+     - New DRESP2 response types: Magnigtude of Displacement and
+       maximization of stiffness and frequency.
+1 
+     Nonlinear
+     - Nonlinear Buckling available in SOL 400
+     - Allow represtentation of imperfect structural geometry through
+       use modification of grid coordinates based on displacements or
+       modes from a previous run.
+     - MATVE limitation of five scale factor/time constraint data pairs
+       removed.
+  
+     HPC
+     - CASI (Iterative) Solver support available for inertia relief analysis.
+     - Faster Global Transformation Matrix for ACMS to speed up Nastran
+       interface to MSC Adams and AVL EXCITE.
+     - Improved GPU acceleration for FASTFR (Fast Frequency Response) and
+       MPYAD for large models.
+  
+     Nastran HDF5
+     - Support NLLOAD outputs in HDF5
+     - Add KHH/MHH/BHH matrix output control
+     - Support nonlinear buckling and imperfection outputs
+     - Support layered solid and solid shell composite elements
+  
+  
+     Documentation
+     The complete documentation set is provided in a separate installer and
+     when installed is available at: MSC_DOC_DIR/doc/pdf_nastran directory.
+     Where MSC_DOC_DIR is the directory where documentation was installed
+     This help set has cross references between documents, links to how-to
+     videos, and example files.
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+       http://simcompanion.mscsoftware.com/
+  
+     These documents were updated for the MSC Nastran 2020 SP1 Release
+  
+         1.  Installation and Operations Guide
+         2.  Quick Reference Guide
+         3.  Release Guide
+         4.  Linear Statics Analysis User's Guide
+         5.  Dynamic Analysis User's Guide
+         6.  Superelements User's Guide
+         7.  Rotordynamics User's Guide
+         8.  Demonstration Problems Manual
+         9.  Nastran Embedded Fatigue User's Guide
+        10.  Design Sensitivity and Optimization
+        11.   Nonlinear User's Guide SOL 400
+        12.  DMAP Programmer's Guide
+        13.  High Performance Computing User's Guide
+        14.  DEMATD Guide
+1       15.  Explicit Nonlinear (SOL 700) User's Guide
+  
+   Please refer to  MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+   for the complete document set:
+  
+  
+   Feature Deprecation List
+   To streamline the MSC Nastran program and simplify ongoing maintenance
+   activiy, some obsolete capabilities have been identified and tagged for
+   removal from a future release of the program in late 2020. Please review
+   the list of features marked for deprecation below to ensure that there
+   will be no disruption to your use of MSC Nastran. If you see a feature
+   that you currently use and do not wish to lose, contact MSC Technical
+   Support to report it.
+  
+     Features tagged for removal:
+     - P-elements
+     - SOL 600 nonlinear solution sequence
+     - Unstructured one- and two-digit solution sequences (e.g. SOL 3, SOL 24)
+     - SOL 190 (DBTRANS)
+     - TAUCS solver
+     - MSGMESH
+     - Obsolete DMAP modules
+     - SSSALTERS
+  
+     Refer to the MSC Nastran 2020 Release Guide for more details.
+  
+  
+   Additional information about the release can be found at the MSC Nastran
+   Product Support page: http://simcompanion.mscsoftware.com
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+        MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      http://www.mscsoftware.com/Contents/Services/Training/
+  
+1                                                       **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     NASTRAN BUFFSIZE=8193 $(C:/PROGRAM FILES/MSC.SOFTWARE/NAPA_SE/2020/NASTRAN/CONF/
+     $ DIRECT TEXT INPUT FOR NASTRAN SYSTEM CELL SECTION                             
+     NASTRAN SYSTEM(151)=1                                                           
+     NASTRAN BUFFSIZE=65537                                                          
+     NASTRAN DBCFACT=4                                                               
+1                                                       **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     SOL 101                                                                                 
+     CEND                                                                                    
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     3
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1      $ DIRECT TEXT INPUT FOR GLOBAL CASE CONTROL DATA                                        
+                  2      TITLE = QUASI_STATIC_XYZ                                                                
+                  3      ECHO = NONE                                                                             
+                  4      LINES=50000                                                                             
+                  5      SUBCASE 1                                                                               
+                  6       $SUBCASE NAME : QSTATIC_X                                                              
+                  7         SUBTITLE=QSTATIC_X                                                                   
+                  8         SPC = 2                                                                              
+                  9         WEIGHTCHECK(PRINT,SET=ALL) = YES                                                     
+                 10         LOAD = 11                                                                            
+                 11         DISPLACEMENT(PLOT,SORT1,REAL)=ALL                                                    
+                 12          SET 102 = 1 THRU 12                                                                 
+                 13                  $ 2021,2022,2023,2024,2031,2032,2033,2034,                                  
+                 14                  $ 2041,2042,2043,2044,2051,2052,2053,2054                                   
+                 15         SPCFORCES(SORT1,PHASE)=ALL                                                           
+                 16         FORCES(SORT1,PHASE)=102                                                              
+                 17         STRESS(PLOT,SORT1,REAL,VONMISES,BILIN)=ALL                                           
+                 18      SUBCASE 2                                                                               
+                 19       $SUBCASE NAME : QSTATIC_Y                                                              
+                 20         SUBTITLE=QSTATIC_Y                                                                   
+                 21         SPC = 2                                                                              
+                 22         $WEIGHTCHECK(PRINT,SET=ALL) = YES                                                    
+                 23         LOAD = 12                                                                            
+                 24         DISPLACEMENT(PLOT,SORT1,REAL)=ALL                                                    
+                 25         SET 102 = 1 THRU 12                                                                  
+                 26                  $ 2021,2022,2023,2024,2031,2032,2033,2034,                                  
+                 27                   $ 2041,2042,2043,2044,2051,2052,2053,2054                                  
+                 28         SPCFORCES(SORT1,PHASE)=ALL                                                           
+                 29         FORCES(SORT1,PHASE)=102                                                              
+                 30         STRESS(PLOT,SORT1,REAL,VONMISES,BILIN)=ALL                                           
+                 31      SUBCASE 3                                                                               
+                 32       $SUBCASE NAME : QSTATIC_Z                                                              
+                 33         SUBTITLE=QSTATIC_Z                                                                   
+                 34         SPC = 2                                                                              
+                 35         WEIGHTCHECK(PRINT,SET=ALL) = YES                                                     
+                 36         LOAD = 13                                                                            
+                 37         DISPLACEMENT(PLOT,SORT1,REAL)=ALL                                                    
+                 38         SET 102 = 1 THRU 12                                                                  
+                 39                   $ 2021,2022,2023,2024,2031,2032,2033,2034,                                 
+                 40                   $ 2041,2042,2043,2044,2051,2052,2053,2054                                  
+                 41         SPCFORCES(SORT1,PHASE)=ALL                                                           
+                 42         FORCES(SORT1,PHASE)=102                                                              
+                 43         STRESS(PLOT,SORT1,REAL,VONMISES,BILIN)=ALL                                           
+                 44      BEGIN BULK                                                                              
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+                                              I N P U T   B U L K   D A T A   E C H O                                               
+                 ENTRY                                                                                                              
+                 COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
+                              $INCLUDE "..\..\Satelite_G11.bdf"
+                              $END OF INCLUDE "..\..\Satelite_G11.bdf"
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     5
+                                                                                                                                    
+0                                                                                                                                   
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                         CBAR                     1988
+                                        CBUSH                       12
+                                        CONM2                        3
+                                       CQUAD4                     3520
+                                       CTRIA3                      200
+                                         GRAV                        3
+                                         GRID                     3567
+                                         LOAD                        3
+                                         MAT1                        1
+                                        PARAM                        2
+                                         PBAR                        4
+                                        PBARL                        4
+                                        PBUSH                        1
+                                       PSHELL                        3
+                                         RBE2                        3
+                                         SPC1                        1
+                                       SPCADD                        1
+
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     6
+                                                                                                                                    
+0                                                                                                                                   
+                                           O U T P U T   F R O M   W E I G H T   C H E C K
+0                                                     DEGREES OF FREEDOM SET = J       
+0                                                     REFERENCE POINT =        0
+                                                                M O
+                      *  4.937142E+01 -8.077431E-18  1.683056E-17  4.200128E-18  1.389102E+01 -1.184412E-05 *
+                      * -8.077431E-18  4.937142E+01 -1.768920E-17 -1.389102E+01 -8.113443E-18  1.184412E-05 *
+                      *  1.683056E-17 -1.768920E-17  4.937142E+01  1.184412E-05 -1.184412E-05  3.913315E-18 *
+                      *  4.200128E-18 -1.389102E+01  1.184412E-05  6.035094E+00 -1.777846E-09 -4.396145E-06 *
+                      *  1.389102E+01 -8.113443E-18 -1.184412E-05 -1.777846E-09  6.035094E+00 -4.396145E-06 *
+                      * -1.184412E-05  1.184412E-05  3.913315E-18 -4.396145E-06 -4.396145E-06  1.258516E+00 *
+                                                                 S
+                                           *  1.000000E+00  0.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  1.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  0.000000E+00  1.000000E+00 *
+                               DIRECTION
+                          MASS AXIS SYSTEM (S)     MASS              X-C.G.        Y-C.G.        Z-C.G.
+                                  X            4.937142E+01      8.507206E-20  2.398982E-07  2.813576E-01
+                                  Y            4.937142E+01      2.398982E-07 -1.643348E-19  2.813576E-01
+                                  Z            4.937142E+01      2.398982E-07  2.398982E-07  7.926275E-20
+                                                                I(S)
+                                           *  2.126748E+00  1.775004E-09  1.063712E-06 *
+                                           *  1.775004E-09  2.126748E+00  1.063713E-06 *
+                                           *  1.063712E-06  1.063713E-06  1.258516E+00 *
+                                                                I(Q)
+                                           *  2.126748E+00                             *
+                                           *                2.126748E+00               *
+                                           *                              1.258516E+00 *
+                                                                 Q
+                                           *  1.000000E+00  0.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  1.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  0.000000E+00  1.000000E+00 *
+
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     7
+                                                                                                                                    
+0                                                                                                                                   
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     8
+                                                                                                                                    
+0                                                                                                                                   
+ *** USER INFORMATION MESSAGE 7310 (VECPRN)
+     ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM WILL BE USED AS REFERENCE LOCATION.
+     RESULTANTS ABOUT ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM IN SUPERELEMENT OR MODULE
+     BASIC SYSTEM COORDINATES.
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX    2.906002E+03     ----          ----          ----       8.204758E+02 -6.971447E-04                             
+               FY       ----      -4.754376E-16     ----       1.928445E-16     ----       8.692664E-18                             
+               FZ       ----          ----       9.906466E-16  5.437506E-17 -7.581705E-17     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----      -2.850075E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  2.906002E+03 -4.754376E-16  9.906466E-16  2.472196E-16  8.176257E+02 -6.971447E-04
+0        2     FX   -4.754376E-16     ----          ----          ----      -1.928445E-16 -6.396281E-17                             
+               FY       ----       2.906002E+03     ----      -8.204758E+02     ----       6.971447E-04                             
+               FZ       ----          ----      -1.041186E-15  1.273400E-16 -2.847128E-16     ----                                  
+               MX       ----          ----          ----       2.850075E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS -4.754376E-16  2.906002E+03 -1.041186E-15 -8.176257E+02 -4.775573E-16  6.971447E-04
+0        3     FX    2.146401E-15     ----          ----          ----       4.033128E-16 -1.178126E-16                             
+               FY       ----      -2.255904E-15     ----       8.380777E-16     ----       6.168776E-16                             
+               FZ       ----          ----       6.296337E+03  1.510480E-03 -1.510480E-03     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  2.146401E-15 -2.255904E-15  6.296337E+03  1.510480E-03 -1.510480E-03  4.990650E-16
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     9
+                                                                                                                                    
+0                                                                                                            SUBCASE 1              
+  
+ *** SYSTEM INFORMATION MESSAGE 4159 (DFMSA)
+     THE DECOMPOSITION OF KLL      YIELDS A MAXIMUM MATRIX-TO-FACTOR-DIAGONAL RATIO OF    7.977225E+02
+ *** USER INFORMATION MESSAGE 5293 (SSG3A)
+    FOR DATA BLOCK KLL     
+    LOAD SEQ. NO.             EPSILON              EXTERNAL WORK      EPSILONS LARGER THAN 0.001 ARE FLAGGED WITH ASTERISKS
+                1         -6.0844716E-15          1.6401170E-01
+                2          1.9060083E-14          1.6401149E-01
+                3         -1.5564923E-14          6.1605814E-01
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    10
+                                                                                                                                    
+0                                                                                                                                   
+ *** USER INFORMATION MESSAGE 7310 (VECPRN)
+     ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM WILL BE USED AS REFERENCE LOCATION.
+     RESULTANTS ABOUT ORIGIN OF SUPERELEMENT OR MODULE BASIC COORDINATE SYSTEM IN SUPERELEMENT OR MODULE
+     BASIC SYSTEM COORDINATES.
+0                                                  SPCFORCE RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX   -2.906002E+03     ----          ----          ----       5.812004E+01  3.588958E-04                             
+               FY       ----       1.396785E-10     ----       2.793550E-12     ----       3.381447E-04                             
+               FZ       ----          ----      -3.898322E-10 -5.742205E-06 -7.404961E+02     ----                                  
+               MX       ----          ----          ----       5.742279E-06     ----          ----                                  
+               MY       ----          ----          ----          ----      -1.352497E+02     ----                                  
+               MZ       ----          ----          ----          ----          ----       1.042222E-07                             
+             TOTALS -2.906002E+03  1.396785E-10 -3.898322E-10  7.681807E-11 -8.176257E+02  6.971447E-04
+0        2     FX    6.183143E-11     ----          ----          ----      -1.236902E-12 -3.167579E-04                             
+               FY       ----      -2.906002E+03     ----      -5.812004E+01     ----      -3.804252E-04                             
+               FZ       ----          ----      -4.288836E-10  7.404961E+02 -5.900828E-06     ----                                  
+               MX       ----          ----          ----       1.352497E+02     ----          ----                                  
+               MY       ----          ----          ----          ----       5.900717E-06     ----                                  
+               MZ       ----          ----          ----          ----          ----       3.854603E-08                             
+             TOTALS  6.183143E-11 -2.906002E+03 -4.288836E-10  8.176257E+02 -1.129085E-10 -6.971446E-04
+0        3     FX    1.597300E-11     ----          ----          ----      -3.192602E-13 -2.174455E-05                             
+               FY       ----       2.170886E-11     ----       4.337376E-13     ----       2.661674E-05                             
+               FZ       ----          ----      -6.296337E+03 -1.348375E-03  1.347703E-03     ----                                  
+               MX       ----          ----          ----      -1.621052E-04     ----          ----                                  
+               MY       ----          ----          ----          ----       1.627768E-04     ----                                  
+               MZ       ----          ----          ----          ----          ----      -4.872464E-06                             
+             TOTALS  1.597300E-11  2.170886E-11 -6.296337E+03 -1.510480E-03  1.510480E-03 -2.700390E-10
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    11
+                                                                                                                                    
+0                                                                                                                                   
+0                                                  MAXIMUM  SPCFORCES       
+  SUBCASE/
+  DAREA ID        T1             T2             T3             R1             R2             R3
+0        1   4.9411603E+02  8.1433454E+01  6.8524255E+02  7.5271427E+00  1.8848499E+01  1.9864740E-03
+0        2   8.1433678E+01  4.9411535E+02  6.8524267E+02  1.8848502E+01  7.5271348E+00  1.9864817E-03
+0        3   1.3869003E+02  1.3868975E+02  6.6195937E+02  1.3271920E+01  1.3271897E+01  2.1584971E-04
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    12
+                                                                                                                                    
+0                                                                                                                                   
+0                                                  MAXIMUM  DISPLACEMENTS   
+  SUBCASE/
+  DAREA ID        T1             T2             T3             R1             R2             R3
+0        1   2.7196610E-04  1.1861940E-05  7.3590918E-05  6.6906028E-04  2.3656811E-03  1.1098063E-03
+0        2   1.1862054E-05  2.7196570E-04  7.3590708E-05  2.3656811E-03  6.6906984E-04  1.1098092E-03
+0        3   6.0586539E-05  6.0586703E-05  4.0462135E-04  3.2468776E-03  3.2463408E-03  5.5452348E-04
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    13
+                                                                                                                                    
+0                                                                                                                                   
+0                                                  MAXIMUM  APPLIED LOADS   
+  SUBCASE/
+  DAREA ID        T1             T2             T3             R1             R2             R3
+0        1   6.4746000E+02  6.8688820E-18  5.4329173E-17  0.0000000E+00  6.7823568E-03  0.0000000E+00
+0        2   6.8688820E-18  6.4746000E+02  6.7796080E-17  6.7823568E-03  0.0000000E+00  0.0000000E+00
+0        3   1.1771321E-16  1.4689151E-16  1.4028300E+03  0.0000000E+00  0.0000000E+00  0.0000000E+00
+ *** USER WARNING MESSAGE 6418 (SDR2A)
+     THE BILIN OPTION FOR STRESSES OVERRIDES ALL OTHER OPTIONS IN STRAIN AND FORCE COMMANDS.
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    14
+     QSTATIC_X                                                                                                                      
+0                                                                                                            SUBCASE 1              
+ 
+                               F O R C E S   O F   S I N G L E - P O I N T   C O N S T R A I N T
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -2.200978E+02   4.495764E+01  -1.385676E+02   3.837519E+00  -7.124276E+00  -3.580717E-04
+             2      G     -1.228948E+01   8.143289E+01  -6.852341E+02  -9.692195E-01  -1.884827E+01  -1.453217E-04
+             3      G     -1.228856E+01  -8.143345E+01  -6.852229E+02   9.693457E-01  -1.884810E+01   1.469303E-04
+             4      G     -2.200958E+02  -4.496015E+01  -1.385708E+02  -3.837548E+00  -7.124283E+00   3.580479E-04
+             5      G     -4.941136E+02   6.029023E+01  -2.729234E+02   7.527048E+00  -7.839802E+00  -1.986474E-03
+             6      G     -4.941160E+02  -6.028798E+01  -2.729269E+02  -7.527143E+00  -7.839877E+00   1.985717E-03
+             7      G     -4.941115E+02  -6.028711E+01   2.729185E+02  -7.526923E+00  -7.839858E+00  -1.985760E-03
+             8      G     -2.200965E+02  -4.495552E+01   1.385704E+02  -3.837545E+00  -7.124295E+00  -3.579105E-04
+             9      G     -2.200992E+02   4.495318E+01   1.385671E+02   3.837514E+00  -7.124290E+00   3.580360E-04
+            10      G     -4.941103E+02   6.028919E+01   2.729156E+02   7.526843E+00  -7.839794E+00   1.986411E-03
+            11      G     -1.229103E+01  -8.141778E+01   6.852316E+02   9.693060E-01  -1.884834E+01  -1.467776E-04
+            12      G     -1.229202E+01   8.141886E+01   6.852425E+02  -9.691926E-01  -1.884850E+01   1.452783E-04
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    15
+     QSTATIC_Y                                                                                                                      
+0                                                                                                            SUBCASE 2              
+ 
+                               F O R C E S   O F   S I N G L E - P O I N T   C O N S T R A I N T
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      4.496009E+01  -2.200955E+02  -1.385708E+02   7.124283E+00  -3.837548E+00   3.580897E-04
+             2      G      6.028807E+01  -4.941153E+02  -2.729265E+02   7.839871E+00  -7.527135E+00   1.985831E-03
+             3      G     -6.028927E+01  -4.941096E+02   2.729153E+02   7.839788E+00   7.526836E+00   1.986410E-03
+             4      G     -4.495310E+01  -2.200989E+02   1.385672E+02   7.124289E+00   3.837515E+00   3.580597E-04
+             5      G      8.143262E+01  -1.228851E+01  -6.852230E+02   1.884810E+01   9.693393E-01   1.468577E-04
+             6      G     -8.141806E+01  -1.229200E+01   6.852427E+02   1.884850E+01  -9.691861E-01   1.454988E-04
+             7      G     -8.143368E+01  -1.228952E+01  -6.852340E+02   1.884826E+01  -9.692256E-01  -1.453763E-04
+             8      G     -4.495772E+01  -2.200982E+02  -1.385676E+02   7.124278E+00   3.837518E+00  -3.581987E-04
+             9      G      4.495559E+01  -2.200968E+02   1.385703E+02   7.124296E+00  -3.837544E+00  -3.580634E-04
+            10      G      8.141857E+01  -1.229107E+01   6.852315E+02   1.884833E+01   9.693122E-01  -1.468295E-04
+            11      G     -6.029015E+01  -4.941142E+02  -2.729237E+02   7.839807E+00   7.527056E+00  -1.986482E-03
+            12      G      6.028704E+01  -4.941122E+02   2.729188E+02   7.839863E+00  -7.526930E+00  -1.985758E-03
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    16
+     QSTATIC_Z                                                                                                                      
+0                                                                                                            SUBCASE 3              
+ 
+                               F O R C E S   O F   S I N G L E - P O I N T   C O N S T R A I N T
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      4.807487E+01   4.807495E+01  -2.501791E+02   1.618353E+00  -1.618369E+00   3.026647E-08
+             2      G      1.386900E+02  -8.231815E+00  -6.619555E+02  -1.607511E+00  -1.327183E+01   2.146905E-04
+             3      G      1.386884E+02   8.231627E+00  -6.619459E+02   1.607656E+00  -1.327170E+01  -2.157779E-04
+             4      G      4.807347E+01  -4.807454E+01  -2.501790E+02  -1.618378E+00  -1.618358E+00  -1.408326E-08
+             5      G     -8.232592E+00   1.386886E+02  -6.619469E+02   1.327172E+01   1.607642E+00  -2.158342E-04
+             6      G     -8.236175E+00  -1.386896E+02  -6.619594E+02  -1.327192E+01   1.607511E+00   2.144784E-04
+             7      G      8.231119E+00   1.386898E+02  -6.619546E+02   1.327181E+01  -1.607524E+00   2.146418E-04
+             8      G     -4.807459E+01   4.807344E+01  -2.501791E+02   1.618374E+00   1.618362E+00  -1.258918E-07
+             9      G     -4.807303E+01  -4.807313E+01  -2.501790E+02  -1.618367E+00   1.618384E+00   2.805793E-08
+            10      G      8.236100E+00  -1.386879E+02  -6.619498E+02  -1.327178E+01  -1.607656E+00  -2.158037E-04
+            11      G     -1.386882E+02  -8.236693E+00  -6.619506E+02  -1.607644E+00   1.327180E+01  -2.158497E-04
+            12      G     -1.386894E+02   8.235323E+00  -6.619584E+02   1.607524E+00   1.327190E+01   2.146640E-04
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    17
+     QSTATIC_X                                                                                                                      
+0                                                                                                            SUBCASE 1              
+ 
+                                 F O R C E S   I N   B U S H   E L E M E N T S        ( C B U S H )
+ 
+                  ELEMENT-ID        FORCE-X       FORCE-Y       FORCE-Z      MOMENT-X      MOMENT-Y      MOMENT-Z  
+0                          1      1.385676E+02 -4.495764E+01 -2.200978E+02  3.580717E-04  4.923298E+00  4.287095E+00
+0                          2      6.852341E+02 -8.143289E+01 -1.228948E+01  1.453217E-04  1.872537E+01 -1.548906E-01
+0                          3      6.852229E+02  8.143345E+01 -1.228856E+01 -1.469303E-04  1.872521E+01  1.550112E-01
+0                          4      1.385708E+02  4.496015E+01 -2.200958E+02 -3.580479E-04  4.923326E+00 -4.287149E+00
+0                          5      2.729234E+02 -6.029023E+01 -4.941136E+02  1.986474E-03  2.898666E+00  8.129951E+00
+0                          6      2.729269E+02  6.028798E+01 -4.941160E+02 -1.985717E-03  2.898716E+00 -8.130023E+00
+0                          7     -2.729185E+02  6.028711E+01 -4.941115E+02  1.985760E-03  2.898743E+00 -8.129794E+00
+0                          8     -1.385704E+02  4.495552E+01 -2.200965E+02  3.579105E-04  4.923330E+00 -4.287100E+00
+0                          9     -1.385671E+02 -4.495318E+01 -2.200992E+02 -3.580360E-04  4.923298E+00  4.287046E+00
+0                         10     -2.729156E+02 -6.028919E+01 -4.941103E+02 -1.986411E-03  2.898691E+00  8.129735E+00
+0                         11     -6.852316E+02  8.141778E+01 -1.229103E+01  1.467776E-04  1.872543E+01  1.551283E-01
+0                         12     -6.852425E+02 -8.141886E+01 -1.229202E+01 -1.452783E-04  1.872558E+01 -1.550040E-01
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    18
+     QSTATIC_Y                                                                                                                      
+0                                                                                                            SUBCASE 2              
+ 
+                                 F O R C E S   I N   B U S H   E L E M E N T S        ( C B U S H )
+ 
+                  ELEMENT-ID        FORCE-X       FORCE-Y       FORCE-Z      MOMENT-X      MOMENT-Y      MOMENT-Z  
+0                          1      1.385708E+02  2.200955E+02  4.496009E+01 -3.580897E-04  4.287149E+00  4.923328E+00
+0                          2      2.729265E+02  4.941153E+02  6.028807E+01 -1.985831E-03  8.130015E+00  2.898717E+00
+0                          3     -2.729153E+02  4.941096E+02 -6.028927E+01 -1.986410E-03 -8.129728E+00  2.898692E+00
+0                          4     -1.385672E+02  2.200989E+02 -4.495310E+01 -3.580597E-04 -4.287046E+00  4.923300E+00
+0                          5      6.852230E+02  1.228851E+01  8.143262E+01 -1.468577E-04 -1.550131E-01  1.872522E+01
+0                          6     -6.852427E+02  1.229200E+01 -8.141806E+01 -1.454988E-04  1.550055E-01  1.872558E+01
+0                          7      6.852340E+02  1.228952E+01 -8.143368E+01  1.453763E-04  1.548888E-01  1.872537E+01
+0                          8      1.385676E+02  2.200982E+02 -4.495772E+01  3.581987E-04 -4.287095E+00  4.923296E+00
+0                          9     -1.385703E+02  2.200968E+02  4.495559E+01  3.580634E-04  4.287100E+00  4.923328E+00
+0                         10     -6.852315E+02  1.229107E+01  8.141857E+01  1.468295E-04 -1.551265E-01  1.872542E+01
+0                         11      2.729237E+02  4.941142E+02 -6.029015E+01  1.986482E-03 -8.129957E+00  2.898665E+00
+0                         12     -2.729188E+02  4.941122E+02  6.028704E+01  1.985758E-03  8.129801E+00  2.898742E+00
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    19
+     QSTATIC_Z                                                                                                                      
+0                                                                                                            SUBCASE 3              
+ 
+                                 F O R C E S   I N   B U S H   E L E M E N T S        ( C B U S H )
+ 
+                  ELEMENT-ID        FORCE-X       FORCE-Y       FORCE-Z      MOMENT-X      MOMENT-Y      MOMENT-Z  
+0                          1      2.501791E+02 -4.807495E+01  4.807487E+01 -3.026647E-08  2.099118E+00  2.099102E+00
+0                          2      6.619555E+02  8.231815E+00  1.386900E+02 -2.146905E-04  1.465873E+01 -1.689829E+00
+0                          3      6.619459E+02 -8.231627E+00  1.386884E+02  2.157779E-04  1.465858E+01  1.689973E+00
+0                          4      2.501790E+02  4.807454E+01  4.807347E+01  1.408326E-08  2.099093E+00 -2.099124E+00
+0                          5      6.619469E+02 -1.386886E+02 -8.232592E+00  2.158342E-04 -1.689968E+00  1.465861E+01
+0                          6      6.619594E+02  1.386896E+02 -8.236175E+00 -2.144784E-04 -1.689873E+00 -1.465882E+01
+0                          7      6.619546E+02 -1.386898E+02  8.231119E+00 -2.146418E-04  1.689835E+00  1.465871E+01
+0                          8      2.501791E+02 -4.807344E+01 -4.807459E+01  1.258918E-07 -2.099108E+00  2.099109E+00
+0                          9      2.501790E+02  4.807313E+01 -4.807303E+01 -2.805793E-08 -2.099114E+00 -2.099098E+00
+0                         10      6.619498E+02  1.386879E+02  8.236100E+00  2.158037E-04  1.690017E+00 -1.465866E+01
+0                         11      6.619506E+02  8.236693E+00 -1.386882E+02  2.158497E-04 -1.465869E+01 -1.690011E+00
+0                         12      6.619584E+02 -8.235323E+00 -1.386894E+02 -2.146640E-04 -1.465879E+01  1.689877E+00
+1    QUASI_STATIC_XYZ                                   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    20
+                                                                                                                                    
+0                                                                                                                                   
+ * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
+
+
+
+0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
+0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
+ --------------------------------------------------------------------------------------------------------------------------
+     0     0    1    1 '        '    T    T    T    T    T     F      F      T      0     F     -1            0           F
+0SEID = SUPERELEMENT ID.
+ PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
+ PROJ = PROJECT ID NUMBER.
+ VERS = VERSION ID.
+ APRCH = BLANK FOR STRUCTURAL ANALYSIS.  HEAT FOR HEAT TRANSFER ANALYSIS.
+ SEMG = STIFFNESS AND MASS MATRIX GENERATION STEP.
+ SEMR = MASS MATRIX REDUCTION STEP (INCLUDES EIGENVALUE SOLUTION FOR MODES).
+ SEKR = STIFFNESS MATRIX REDUCTION STEP.
+ SELG = LOAD MATRIX GENERATION STEP.
+ SELR = LOAD MATRIX REDUCTION STEP. 
+ MODES = T (TRUE) IF NORMAL MODES OR BUCKLING MODES CALCULATED.
+ DYNRED = T (TRUE) MEANS GENERALIZED DYNAMIC AND/OR COMPONENT MODE REDUCTION PERFORMED.
+ SOLLIN = T (TRUE) IF LINEAR SOLUTION EXISTS IN DATABASE.
+ PVALID = P-DISTRIBUTION ID OF P-VALUE FOR P-ELEMENTS
+ LOOPID = THE LAST LOOPID VALUE USED IN THE NONLINEAR ANALYSIS.  USEFUL FOR RESTARTS.
+ SOLNL = T (TRUE) IF NONLINEAR SOLUTION EXISTS IN DATABASE.
+ DESIGN CYCLE = THE LAST DESIGN CYCLE (ONLY VALID IN OPTIMIZATION).
+ SENSITIVITY = SENSITIVITY MATRIX GENERATION FLAG.
+ 
+ No PARAM values were set in the Control File.
+ 
+1                                        * * * END OF JOB * * *
+ 
+ 
+ No Symbolic Replacement variables or values were specified.
+
