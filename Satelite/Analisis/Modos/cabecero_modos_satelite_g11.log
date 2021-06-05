@@ -7,7 +7,7 @@ MEM=527MB      $
 MACH='Intel'
 OPER='Windows 10 Home'
 OSV='6.2 9200'
-MODEL='Xeon/3390 (LAPTOP-53F8OSPS)'
+MODEL='Xeon/3479 (LAPTOP-53F8OSPS)'
 NPROC='12'
 CONFIG=6
 NPROC=12
@@ -15,8 +15,8 @@ symbol=DELDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/
 symbol=DEMODIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/demo' $(program default)
 symbol=SSSALTERDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/sssalter' $(program default)
 symbol=TPLDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/tpl' $(program default)
-SDIR='c:/scratch/cabecero_modos_satelite_g11.T12564_48'
-DBS='c:/scratch/cabecero_modos_satelite_g11.T12564_48'
+SDIR='c:/scratch/cabecero_modos_satelite_g11.T3264_34'
+DBS='c:/scratch/cabecero_modos_satelite_g11.T3264_34'
 SCR='yes'
 SMEM=100
 BPOOL=150
@@ -46,9 +46,9 @@ FPE:         yes
 ----------------------------------------------------------------- 
 Current resource limits:
  Physical memory:                     8065 MB
- Physical memory available:           1970 MB
+ Physical memory available:           2421 MB
  Paging file size:                   13185 MB
- Paging file size available:          4520 MB
+ Paging file size available:          4683 MB
  Virtual memory:                 134217727 MB
  Virtual memory available:       134213511 MB
 ----------------------------------------------------------------- 
@@ -56,8 +56,8 @@ System configuration:
  Hostname:         LAPTOP-53F8OSPS.home
  Architecture:     win64i8
  Platform:         Intel Windows 10 Home 6.2 9200 (Windows Compute Cluster)
- Model:            Xeon/2879
- Clock freq.:      3392 MHz
+ Model:            Xeon/3555
+ Clock freq.:      3550 MHz
  Number of CPUs:   12
  Executable:       standard
  Raw model ID:     6
@@ -70,8 +70,8 @@ System configuration:
  Remote shell cmd: "c:/program files/msc.software/napa_se/2020/nastran/msc20200/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
                    <ccs_cmd> (Windows CCS nodes)
 ----------------------------------------------------------------- 
-MSC Nastran started  Sat Jun  5 17:34:48 Hdvr 2021 
- 17:34:50  Beginning Analysis
+MSC Nastran started  Sat Jun  5 17:50:36 Hdvr 2021 
+ 17:50:44  Beginning Analysis
 SCA Kernel 24.7.714370 successfully initialized
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\libimalloc.dll" has been loaded.
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_core.dll" has been loaded.
@@ -79,39 +79,39 @@ BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\wi
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_rt.dll" has been loaded.
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\MSCblas.dll" has been loaded.
 
- 17:34:50  MSC Authorization Information - Checkout Successful (1016, 0)
- 17:34:50  -------------------------------------------------------------
- 17:34:50  Acquired 1 license for Student Edition Nastran
+ 17:50:44  MSC Authorization Information - Checkout Successful (1016, 0)
+ 17:50:44  -------------------------------------------------------------
+ 17:50:44  Acquired 1 license for Student Edition Nastran
 
 
 Beginning bulk data processing using the IFPStar component.
 For more information on IFPStar, please see KB article KB8019200
 on our support pages, at http://simcompanion.mscsoftware.com.
 
- 17:34:50  Reading INCLUDE file "..\..\Satelite_G11.bdf"
- 17:34:50  14861 records read from INCLUDE file "..\..\Satelite_G11.bdf"
- 17:34:50  34 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/modos/cabecero_modos_satelite_g11.dat"
- 17:34:50  A total of 14895 records were read from 2 files.
+ 17:50:46  Reading INCLUDE file "..\..\Satelite_G11.bdf"
+ 17:50:46  14863 records read from INCLUDE file "..\..\Satelite_G11.bdf"
+ 17:50:46  34 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/modos/cabecero_modos_satelite_g11.dat"
+ 17:50:46  A total of 14897 records were read from 2 files.
 
 Processing of bulk data entries is complete.
 
- 17:34:50  Analysis started.
- 17:34:50  Geometry access/verification to CAD part initiated (if needed).
- 17:34:50  Geometry access/verification to CAD part successfully completed (if needed).
- 17:34:51  Finite element model generation started.
- 17:34:51  Finite element model generated 21402 degrees of freedom.
- 17:34:51  Finite element model generation successfully completed.
- 17:34:51  Application of Loads and Boundary Conditions to the finite element model started.
- 17:34:51  Application of Loads and Boundary Conditions to the finite element model successfully completed.
- 17:34:51  Solution of the system equations for normal modes started.
- 17:34:52  Solution of the system equations for normal modes successfully completed.
- 17:34:52  Normal modes analysis completed.
- 17:34:52  20 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/modos/cabecero_modos_satelite_g11.dat"
- 17:34:52  NSEXIT: EXIT(0)
- 17:34:52  Analysis complete  0
-Real:        3.043 seconds ( 0:00:03.043)
-User:        2.187 seconds ( 0:00:02.187)
-Sys:         0.750 seconds ( 0:00:00.750)
+ 17:50:47  Analysis started.
+ 17:50:47  Geometry access/verification to CAD part initiated (if needed).
+ 17:50:47  Geometry access/verification to CAD part successfully completed (if needed).
+ 17:50:48  Finite element model generation started.
+ 17:50:49  Finite element model generated 21402 degrees of freedom.
+ 17:50:49  Finite element model generation successfully completed.
+ 17:50:49  Application of Loads and Boundary Conditions to the finite element model started.
+ 17:50:49  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 17:50:50  Solution of the system equations for normal modes started.
+ 17:50:53  Solution of the system equations for normal modes successfully completed.
+ 17:50:54  Normal modes analysis completed.
+ 17:50:54  20 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/modos/cabecero_modos_satelite_g11.dat"
+ 17:50:54  NSEXIT: EXIT(0)
+ 17:50:54  Analysis complete  0
+Real:       17.707 seconds ( 0:00:17.707)
+User:        1.796 seconds ( 0:00:01.796)
+Sys:         0.734 seconds ( 0:00:00.734)
  ==================================================
  OS:                           6.2
  OEM ID:                       9
@@ -128,14 +128,14 @@ Sys:         0.750 seconds ( 0:00:00.750)
  Ram:                          8065 Mb
  ==================================================
  Time Summary                 CPU       Wall   ( Time in Seconds )
- Eigenvalue                   1.3          1 
- Miscellaneous                1.4          1 
+ Eigenvalue                   1.1          3 
+ Miscellaneous                1.2          7 
  -------------------------------------------
- Total:                       2.7          2 
+ Total:                       2.2         10 
  ==================================================
  Consider using SOLVE=AUTO if you have not.
  =====================================================
  Detailed performance information can be found in the 
  "MSC Nastran High Performance Computing User's Guide"
  =====================================================
-MSC Nastran finished Sat Jun  5 17:34:53 Hdvr 2021 
+MSC Nastran finished Sat Jun  5 17:50:56 Hdvr 2021 
