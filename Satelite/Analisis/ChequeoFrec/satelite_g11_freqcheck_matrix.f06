@@ -26,7 +26,7 @@
                                               * *          AUG  4, 2020           * *
                                               * *                                 * *
                                               * *              Intel              * *
-                                              * *MODEL Xeon/3390 (LAPTOP-53F8OSPS * *
+                                              * *MODEL Xeon/3040 (LAPTOP-9T8JDH3K * *
                                               * *    Windows 10 Home 6.2 9200     * *
                                               * * Compiled for 8664 (SINGLE Mode) * *
                                               * *                                 * *
@@ -193,14 +193,14 @@
   
       http://www.mscsoftware.com/Contents/Services/Training/
   
-1                                                       **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     1
+1                                                       **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     1
                                                                                                                                     
 0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
 0                                                                                                                                   
                                                                                                                                     
                                                                                                                                     
      NASTRAN BUFFSIZE=8193 $(C:/PROGRAM FILES/MSC.SOFTWARE/NAPA_SE/2020/NASTRAN/CONF/
-1                                                       **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     2
+1                                                       **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     2
                                                                                                                                     
 0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
 0                                                                                                                                   
@@ -208,7 +208,7 @@
                                                                                                                                     
      SOL 103                                                                                 
      CEND                                                                                    
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     3
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     3
                                                                                                                                     
 0                                                                                                                                   
 0                                        C A S E    C O N T R O L    E C H O                                                        
@@ -225,7 +225,7 @@
                   9         METHOD = 1                                                                           
                  10         VECTOR(PLOT,SORT1,REAL)=ALL                                                          
                  11      BEGIN BULK                                                                              
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     4
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     4
                                                                                                                                     
 0                                                                                                                                   
                                               I N P U T   B U L K   D A T A   E C H O                                               
@@ -233,7 +233,7 @@
                  COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
                               $INCLUDE "..\..\Satelite_G11.bdf"
                               $END OF INCLUDE "..\..\Satelite_G11.bdf"
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     5
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     5
                                                                                                                                     
 0                                                                                                                                   
                                         M O D E L   S U M M A R Y          BULK = 0
@@ -260,17 +260,17 @@
  ^^^     
  *** USER INFORMATION MESSAGE 5010 (LNCILS)
      STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
-     TRIAL EIGENVALUE = 1.207033D+03, CYCLES = 5.529423D+00 THE STURM COUNT = 6
+     TRIAL EIGENVALUE = 1.369097D+03, CYCLES = 5.888941D+00 THE STURM COUNT = 6
  *** USER INFORMATION MESSAGE 5010 (LNCILS)
      STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
-     TRIAL EIGENVALUE = 4.931343D+05, CYCLES = 1.117642D+02 THE STURM COUNT = 7
+     TRIAL EIGENVALUE = 4.945166D+05, CYCLES = 1.119207D+02 THE STURM COUNT = 7
 
  TABLE OF SHIFTS:  (LNNRIGL)
  SHIFT #        SHIFT VALUE         FREQUENCY, CYCLES     # EIGENVALUES BELOW    # NEW EIGENVALUES FOUND
-     1.        1.2070335E+03          5.5294227E+00                 6                        7
-     2.        4.9313426E+05          1.1176420E+02                 7                        0
+     1.        1.3690968E+03          5.8889411E+00                 6                        7
+     2.        4.9451659E+05          1.1192074E+02                 7                        0
 
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     6
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     6
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
 0
@@ -288,34 +288,34 @@
 
                                      NUMBER OF SOLVES REQUIRED ............     9
 
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     7
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     7
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
  
                                               R E A L   E I G E N V A L U E S
    MODE    EXTRACTION      EIGENVALUE            RADIANS             CYCLES            GENERALIZED         GENERALIZED
     NO.       ORDER                                                                       MASS              STIFFNESS
-        1         1       -2.995660E-07        5.473262E-04        8.710967E-05        1.000000E+00       -2.995660E-07
-        2         2       -8.094821E-08        2.845140E-04        4.528181E-05        1.000000E+00       -8.094821E-08
-        3         3       -2.413685E-08        1.553604E-04        2.472637E-05        1.000000E+00       -2.413685E-08
-        4         4        8.557322E-08        2.925290E-04        4.655744E-05        1.000000E+00        8.557322E-08
-        5         5        1.054423E-07        3.247188E-04        5.168059E-05        1.000000E+00        1.054423E-07
-        6         6        2.374859E-07        4.873252E-04        7.756022E-05        1.000000E+00        2.374859E-07
-        7         7        3.928199E+05        6.267534E+02        9.975091E+01        1.000000E+00        3.928199E+05
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     8
+        1         1       -1.481085E-07        3.848487E-04        6.125057E-05        1.000000E+00       -1.481085E-07
+        2         2       -2.923048E-08        1.709692E-04        2.721060E-05        1.000000E+00       -2.923048E-08
+        3         3       -1.872195E-09        4.326887E-05        6.886454E-06        1.000000E+00       -1.872195E-09
+        4         4        5.110064E-08        2.260545E-04        3.597769E-05        1.000000E+00        5.110064E-08
+        5         5        1.767160E-07        4.203760E-04        6.690491E-05        1.000000E+00        1.767160E-07
+        6         6        2.127476E-07        4.612457E-04        7.340954E-05        1.000000E+00        2.127476E-07
+        7         7        3.940189E+05        6.277092E+02        9.990303E+01        1.000000E+00        3.940189E+05
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     8
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
 0                                                  MAXIMUM  DISPLACEMENTS   
   SUBCASE/
   DAREA ID        T1             T2             T3             R1             R2             R3
-0        1   3.1084268E-01  1.8394506E-01  9.3278545E-02  5.0361120E-02  2.5011719E-01  6.7364143E-01
-0        2   2.5979348E-01  1.1074024E-01  6.4613585E-02  1.5668514E-02  1.2350162E-01  4.0110585E-01
-0        3   1.4350990E-01  2.0812819E-01  2.4648668E-01  3.7628511E-01  2.2666932E-01  2.6282979E-01
-0        4   1.2737899E-01  1.5403327E-01  2.3947211E-01  2.5374867E-01  3.3110217E-01  4.9546861E-02
-0        5   1.4119184E-01  1.6613252E-01  1.1118288E-01  4.5008711E-02  3.1453836E-01  1.2992850E-01
-0        6   1.8957207E-01  2.4682079E-01  2.3324127E-01  4.9757448E-01  3.4729453E-01  2.9133227E-01
-0        7   1.6040944E-01  1.6040983E-01  2.2317263E-01  2.6551740E+00  2.6551736E+00  1.0215592E+00
-1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     9
+0        1   2.8720506E-01  1.7523011E-01  1.1715473E-01  1.4076683E-01  2.3641132E-01  4.2794757E-01
+0        2   8.6712334E-02  7.1886762E-02  2.1311201E-01  1.9861553E-01  1.4247325E-01  4.5126466E-02
+0        3   2.4455394E-01  1.6040903E-01  1.9906056E-01  2.3485925E-01  5.4922143E-01  2.1553312E-01
+0        4   2.1291162E-01  2.1323847E-01  6.8018611E-02  8.3268767E-02  1.7564063E-01  3.6813955E-01
+0        5   1.9984407E-01  2.6312742E-01  2.1426954E-01  4.5082465E-01  1.9709398E-01  4.1784095E-01
+0        6   1.6922374E-01  3.2162378E-01  1.2800184E-01  3.6066222E-01  8.4541712E-02  4.8882793E-01
+0        7   1.6178405E-01  1.6178446E-01  2.2363288E-01  2.6931323E+00  2.6931324E+00  1.0298006E+00
+1    RIGID BODY FREQUENCY CHECK                         **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     9
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
  * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
