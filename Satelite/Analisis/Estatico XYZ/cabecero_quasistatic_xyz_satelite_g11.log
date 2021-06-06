@@ -7,7 +7,7 @@ MEM=637MB      $
 MACH='Intel'
 OPER='Windows 10 Home'
 OSV='6.2 9200'
-MODEL='Xeon/2516 (LAPTOP-53F8OSPS)'
+MODEL='Xeon/3379 (LAPTOP-53F8OSPS)'
 NPROC='12'
 CONFIG=6
 NPROC=12
@@ -15,8 +15,8 @@ symbol=DELDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/
 symbol=DEMODIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/demo' $(program default)
 symbol=SSSALTERDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/sssalter' $(program default)
 symbol=TPLDIR='c:/program files/msc.software/napa_se/2020/nastran/msc20200/nast/tpl' $(program default)
-SDIR='c:/scratch/cabecero_quasistatic_xyz_satelite_g11.T16152_8'
-DBS='c:/scratch/cabecero_quasistatic_xyz_satelite_g11.T16152_8'
+SDIR='c:/scratch/cabecero_quasistatic_xyz_satelite_g11.T16332_5'
+DBS='c:/scratch/cabecero_quasistatic_xyz_satelite_g11.T16332_5'
 SCR='yes'
 SMEM=100
 BPOOL=150
@@ -46,9 +46,9 @@ FPE:         yes
 ----------------------------------------------------------------- 
 Current resource limits:
  Physical memory:                     8065 MB
- Physical memory available:           2135 MB
+ Physical memory available:           3078 MB
  Paging file size:                   13185 MB
- Paging file size available:          3954 MB
+ Paging file size available:          5282 MB
  Virtual memory:                 134217727 MB
  Virtual memory available:       134213511 MB
 ----------------------------------------------------------------- 
@@ -57,7 +57,7 @@ System configuration:
  Architecture:     win64i8
  Platform:         Intel Windows 10 Home 6.2 9200 (Windows Compute Cluster)
  Model:            Xeon/3379
- Clock freq.:      3379 MHz
+ Clock freq.:      3381 MHz
  Number of CPUs:   12
  Executable:       standard
  Raw model ID:     6
@@ -70,8 +70,8 @@ System configuration:
  Remote shell cmd: "c:/program files/msc.software/napa_se/2020/nastran/msc20200/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
                    <ccs_cmd> (Windows CCS nodes)
 ----------------------------------------------------------------- 
-MSC Nastran started  Sat Jun  5 22:48:09 Hdvr 2021 
- 22:48:13  Beginning Analysis
+MSC Nastran started  Sun Jun  6 02:58:06 Hdvr 2021 
+ 02:58:15  Beginning Analysis
 SCA Kernel 24.7.714370 successfully initialized
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\libimalloc.dll" has been loaded.
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_core.dll" has been loaded.
@@ -79,43 +79,43 @@ BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\wi
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\mkl_rt.dll" has been loaded.
 BLAS/LAPACK .dll "c:\program files\msc.software\napa_se\2020\nastran\msc20200\win64i8\MSCblas.dll" has been loaded.
 
- 22:48:13  MSC Authorization Information - Checkout Successful (1016, 0)
- 22:48:13  -------------------------------------------------------------
- 22:48:13  Acquired 1 license for Student Edition Nastran
+ 02:58:16  MSC Authorization Information - Checkout Successful (1016, 0)
+ 02:58:16  -------------------------------------------------------------
+ 02:58:16  Acquired 1 license for Student Edition Nastran
 
 
 Beginning bulk data processing using the IFPStar component.
 For more information on IFPStar, please see KB article KB8019200
 on our support pages, at http://simcompanion.mscsoftware.com.
 
- 22:48:14  Reading INCLUDE file "..\..\Satelite_G11.bdf"
- 22:48:14  14846 records read from INCLUDE file "..\..\Satelite_G11.bdf"
- 22:48:14  73 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/estatico xyz/cabecero_quasistatic_xyz_satelite_g11.dat"
- 22:48:14  A total of 14919 records were read from 2 files.
+ 02:58:20  Reading INCLUDE file "..\..\Satelite_G11.bdf"
+ 02:58:20  14844 records read from INCLUDE file "..\..\Satelite_G11.bdf"
+ 02:58:20  73 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/estatico xyz/cabecero_quasistatic_xyz_satelite_g11.dat"
+ 02:58:20  A total of 14917 records were read from 2 files.
 
 Processing of bulk data entries is complete.
 
- 22:48:15  Analysis started.
- 22:48:15  Geometry access/verification to CAD part initiated (if needed).
- 22:48:15  Geometry access/verification to CAD part successfully completed (if needed).
- 22:48:15  Finite element model generation started.
- 22:48:16  Finite element model generated 21402 degrees of freedom.
- 22:48:16  Finite element model generation successfully completed.
- 22:48:16  Application of Loads and Boundary Conditions to the finite element model started.
- 22:48:16  Application of Loads and Boundary Conditions to the finite element model successfully completed.
- 22:48:16  Solution of the system equations for linear statics started.
- 22:48:17  Solution of the system equations for linear statics successfully completed.
- 22:48:17  Linear static analysis completed.
+ 02:58:21  Analysis started.
+ 02:58:21  Geometry access/verification to CAD part initiated (if needed).
+ 02:58:21  Geometry access/verification to CAD part successfully completed (if needed).
+ 02:58:22  Finite element model generation started.
+ 02:58:23  Finite element model generated 21402 degrees of freedom.
+ 02:58:23  Finite element model generation successfully completed.
+ 02:58:24  Application of Loads and Boundary Conditions to the finite element model started.
+ 02:58:24  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 02:58:24  Solution of the system equations for linear statics started.
+ 02:58:24  Solution of the system equations for linear statics successfully completed.
+ 02:58:25  Linear static analysis completed.
  ================================================== 
  Warning/Fatal Message Summary           Occurrence
        USER WARNING MESSAGE     6418.1          1 
  ================================================== 
- 22:48:17  50 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/estatico xyz/cabecero_quasistatic_xyz_satelite_g11.dat"
- 22:48:17  NSEXIT: EXIT(0)
- 22:48:17  Analysis complete  0
-Real:        7.406 seconds ( 0:00:07.406)
-User:        1.453 seconds ( 0:00:01.453)
-Sys:         0.406 seconds ( 0:00:00.406)
+ 02:58:25  50 records read from JID file "c:/users/javiv/documents/github/minisat_est_analisis_rj/satelite/analisis/estatico xyz/cabecero_quasistatic_xyz_satelite_g11.dat"
+ 02:58:25  NSEXIT: EXIT(0)
+ 02:58:25  Analysis complete  0
+Real:       19.056 seconds ( 0:00:19.056)
+User:        1.109 seconds ( 0:00:01.109)
+Sys:         0.484 seconds ( 0:00:00.484)
  ==================================================
  OS:                           6.2
  OEM ID:                       9
@@ -137,4 +137,4 @@ Sys:         0.406 seconds ( 0:00:00.406)
  Detailed performance information can be found in the 
  "MSC Nastran High Performance Computing User's Guide"
  =====================================================
-MSC Nastran finished Sat Jun  5 22:48:18 Hdvr 2021 
+MSC Nastran finished Sun Jun  6 02:58:28 Hdvr 2021 

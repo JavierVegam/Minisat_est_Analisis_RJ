@@ -26,7 +26,7 @@
                                               * *          AUG  4, 2020           * *
                                               * *                                 * *
                                               * *              Intel              * *
-                                              * *MODEL Xeon/3385 (LAPTOP-53F8OSPS * *
+                                              * *MODEL Xeon/3379 (LAPTOP-53F8OSPS * *
                                               * *    Windows 10 Home 6.2 9200     * *
                                               * * Compiled for 8664 (SINGLE Mode) * *
                                               * *                                 * *
@@ -193,7 +193,7 @@
   
       http://www.mscsoftware.com/Contents/Services/Training/
   
-1                                                       **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     1
+1                                                       **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     1
                                                                                                                                     
 0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
 0                                                                                                                                   
@@ -206,7 +206,7 @@
      $ DIRECT TEXT INPUT FOR FILE MANAGEMENT SECTION                                 
      $ DIRECT TEXT INPUT FOR EXECUTIVE CONTROL                                       
      $ NORMAL MODES ANALYSIS, DATABASE                                               
-1                                                       **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     2
+1                                                       **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     2
                                                                                                                                     
 0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
 0                                                                                                                                   
@@ -214,7 +214,7 @@
                                                                                                                                     
      SOL 103                                                                                 
      CEND                                                                                    
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     3
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     3
                                                                                                                                     
 0                                                                                                                                   
 0                                        C A S E    C O N T R O L    E C H O                                                        
@@ -232,7 +232,7 @@
                  10         VECTOR(PLOT,SORT1,REAL)=ALL                                                          
                  11      $ DIRECT TEXT INPUT FOR THIS SUBCASE                                                    
                  12      BEGIN BULK                                                                              
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     4
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     4
                                                                                                                                     
 0                                                                                                                                   
                                               I N P U T   B U L K   D A T A   E C H O                                               
@@ -240,13 +240,14 @@
                  COUNT        .   1  ..   2  ..   3  ..   4  ..   5  ..   6  ..   7  ..   8  ..   9  ..  10  .                      
                               $INCLUDE "..\..\Satelite_G11.bdf"
                               $END OF INCLUDE "..\..\Satelite_G11.bdf"
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     5
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     5
                                                                                                                                     
 0                                                                                                                                   
                                         M O D E L   S U M M A R Y          BULK = 0
                                    ENTRY NAME        NUMBER OF ENTRIES
                                    ----------        -----------------
-                                         CBAR                     1988
+                                         CBAR                     1928
+                                        CBEAM                       60
                                         CBUSH                       12
                                         CONM2                        3
                                        CQUAD4                     3520
@@ -255,8 +256,8 @@
                                          GRID                     3567
                                          MAT1                        1
                                         PARAM                        2
-                                         PBAR                        4
                                         PBARL                        4
+                                       PBEAML                        4
                                         PBUSH                        1
                                        PSHELL                        3
                                          RBE2                        3
@@ -266,7 +267,7 @@
  ^^^     
  ^^^ >>> IFP OPERATIONS COMPLETE <<< 
  ^^^     
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     6
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     6
                                                                                                                                     
 0                                                                                                                                   
  *** USER INFORMATION MESSAGE 7310 (VECPRN)
@@ -283,57 +284,57 @@
                MY       ----          ----          ----          ----       0.000000E+00     ----                                  
                MZ       ----          ----          ----          ----          ----       0.000000E+00                             
              TOTALS  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     7
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     7
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
                                            O U T P U T   F R O M   W E I G H T   C H E C K
 0                                                     DEGREES OF FREEDOM SET = G       
 0                                                     REFERENCE POINT =        0
                                                                 M O
-                      *  4.937142E+01 -8.077431E-18  1.683056E-17  4.200128E-18  1.389102E+01 -1.184412E-05 *
-                      * -8.077431E-18  4.937142E+01 -1.768920E-17 -1.389102E+01 -8.113443E-18  1.184412E-05 *
-                      *  1.683056E-17 -1.768920E-17  4.937142E+01  1.184412E-05 -1.184412E-05  3.913315E-18 *
-                      *  4.200128E-18 -1.389102E+01  1.184412E-05  6.035094E+00 -1.777846E-09 -4.396145E-06 *
-                      *  1.389102E+01 -8.113443E-18 -1.184412E-05 -1.777846E-09  6.035094E+00 -4.396145E-06 *
-                      * -1.184412E-05  1.184412E-05  3.913315E-18 -4.396145E-06 -4.396145E-06  1.258516E+00 *
+                      *  5.025436E+01 -8.077431E-18  1.683033E-17  4.200117E-18  1.400178E+01 -1.202707E-05 *
+                      * -8.077431E-18  5.025436E+01 -1.768939E-17 -1.400178E+01 -8.113455E-18  1.202707E-05 *
+                      *  1.683033E-17 -1.768939E-17  5.025436E+01  1.202707E-05 -1.202707E-05  3.913337E-18 *
+                      *  4.200117E-18 -1.400178E+01  1.202707E-05  6.100519E+00 -1.781089E-09 -4.469232E-06 *
+                      *  1.400178E+01 -8.113455E-18 -1.202707E-05 -1.781089E-09  6.100519E+00 -4.469232E-06 *
+                      * -1.202707E-05  1.202707E-05  3.913337E-18 -4.469232E-06 -4.469232E-06  1.280901E+00 *
                                                                  S
                                            *  1.000000E+00  0.000000E+00  0.000000E+00 *
                                            *  0.000000E+00  1.000000E+00  0.000000E+00 *
                                            *  0.000000E+00  0.000000E+00  1.000000E+00 *
                                DIRECTION
                           MASS AXIS SYSTEM (S)     MASS              X-C.G.        Y-C.G.        Z-C.G.
-                                  X            4.937142E+01      8.507206E-20  2.398982E-07  2.813576E-01
-                                  Y            4.937142E+01      2.398982E-07 -1.643348E-19  2.813576E-01
-                                  Z            4.937142E+01      2.398982E-07  2.398982E-07  7.926275E-20
+                                  X            5.025436E+01      8.357717E-20  2.393238E-07  2.786182E-01
+                                  Y            5.025436E+01      2.393238E-07 -1.614478E-19  2.786182E-01
+                                  Z            5.025436E+01      2.393238E-07  2.393238E-07  7.787060E-20
                                                                 I(S)
-                                           *  2.126748E+00  1.775004E-09  1.063712E-06 *
-                                           *  1.775004E-09  2.126748E+00  1.063713E-06 *
-                                           *  1.063712E-06  1.063713E-06  1.258516E+00 *
+                                           *  2.199368E+00  1.778211E-09  1.118272E-06 *
+                                           *  1.778211E-09  2.199368E+00  1.118272E-06 *
+                                           *  1.118272E-06  1.118272E-06  1.280901E+00 *
                                                                 I(Q)
-                                           *  2.126748E+00                             *
-                                           *                2.126748E+00               *
-                                           *                              1.258516E+00 *
+                                           *  2.199368E+00                             *
+                                           *                2.199368E+00               *
+                                           *                              1.280901E+00 *
                                                                  Q
                                            *  1.000000E+00  0.000000E+00  0.000000E+00 *
                                            *  0.000000E+00  1.000000E+00  0.000000E+00 *
                                            *  0.000000E+00  0.000000E+00  1.000000E+00 *
 
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     8
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     8
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE     9
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE     9
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
                                            O U T P U T   F R O M   W E I G H T   C H E C K
 0                                                     DEGREES OF FREEDOM SET = N       
 0                                                     REFERENCE POINT =        0
                                                                 M O
-                      *  4.937142E+01 -8.077431E-18  1.683056E-17  4.200128E-18  1.389102E+01 -1.184412E-05 *
-                      * -8.077431E-18  4.937142E+01 -1.768920E-17 -1.389102E+01 -8.113443E-18  1.184412E-05 *
-                      *  1.683056E-17 -1.768920E-17  4.937142E+01  1.184412E-05 -1.184412E-05  3.913315E-18 *
-                      *  4.200128E-18 -1.389102E+01  1.184412E-05  6.035094E+00 -1.777846E-09 -4.396145E-06 *
-                      *  1.389102E+01 -8.113443E-18 -1.184412E-05 -1.777846E-09  6.035094E+00 -4.396145E-06 *
-                      * -1.184412E-05  1.184412E-05  3.913315E-18 -4.396145E-06 -4.396145E-06  1.258516E+00 *
+                      *  5.025436E+01 -8.077431E-18  1.683033E-17  4.200117E-18  1.400178E+01 -1.202707E-05 *
+                      * -8.077431E-18  5.025436E+01 -1.768939E-17 -1.400178E+01 -8.113455E-18  1.202707E-05 *
+                      *  1.683033E-17 -1.768939E-17  5.025436E+01  1.202707E-05 -1.202707E-05  3.913337E-18 *
+                      *  4.200117E-18 -1.400178E+01  1.202707E-05  6.100519E+00 -1.781089E-09 -4.469232E-06 *
+                      *  1.400178E+01 -8.113455E-18 -1.202707E-05 -1.781089E-09  6.100519E+00 -4.469232E-06 *
+                      * -1.202707E-05  1.202707E-05  3.913337E-18 -4.469232E-06 -4.469232E-06  1.280901E+00 *
 
 0                                    CHANGE WITH RESPECT TO G-SET RIGID BODY MASS/WEIGHT
                       *       0 %                                                                           *
@@ -342,22 +343,22 @@
                       *                                                 0 %                                 *
                       *                                                               0 %                   *
                       *                                                                             0 %     *
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    10
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    10
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    11
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    11
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
                                            O U T P U T   F R O M   W E I G H T   C H E C K
 0                                                     DEGREES OF FREEDOM SET = F       
 0                                                     REFERENCE POINT =        0
                                                                 M O
-                      *  4.937142E+01 -8.077431E-18  1.683056E-17  4.200128E-18  1.389102E+01 -1.184412E-05 *
-                      * -8.077431E-18  4.937142E+01 -1.768920E-17 -1.389102E+01 -8.113443E-18  1.184412E-05 *
-                      *  1.683056E-17 -1.768920E-17  4.937142E+01  1.184412E-05 -1.184412E-05  3.913315E-18 *
-                      *  4.200128E-18 -1.389102E+01  1.184412E-05  6.035094E+00 -1.777846E-09 -4.396145E-06 *
-                      *  1.389102E+01 -8.113443E-18 -1.184412E-05 -1.777846E-09  6.035094E+00 -4.396145E-06 *
-                      * -1.184412E-05  1.184412E-05  3.913315E-18 -4.396145E-06 -4.396145E-06  1.258516E+00 *
+                      *  5.025436E+01 -8.077431E-18  1.683033E-17  4.200117E-18  1.400178E+01 -1.202707E-05 *
+                      * -8.077431E-18  5.025436E+01 -1.768939E-17 -1.400178E+01 -8.113455E-18  1.202707E-05 *
+                      *  1.683033E-17 -1.768939E-17  5.025436E+01  1.202707E-05 -1.202707E-05  3.913337E-18 *
+                      *  4.200117E-18 -1.400178E+01  1.202707E-05  6.100519E+00 -1.781089E-09 -4.469232E-06 *
+                      *  1.400178E+01 -8.113455E-18 -1.202707E-05 -1.781089E-09  6.100519E+00 -4.469232E-06 *
+                      * -1.202707E-05  1.202707E-05  3.913337E-18 -4.469232E-06 -4.469232E-06  1.280901E+00 *
 
 0                                    CHANGE WITH RESPECT TO G-SET RIGID BODY MASS/WEIGHT
                       *       0 %                                                                           *
@@ -366,22 +367,22 @@
                       *                                                 0 %                                 *
                       *                                                               0 %                   *
                       *                                                                             0 %     *
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    12
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    12
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    13
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    13
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
                                            O U T P U T   F R O M   W E I G H T   C H E C K
 0                                                     DEGREES OF FREEDOM SET = A       
 0                                                     REFERENCE POINT =        0
                                                                 M O
-                      *  4.937142E+01 -8.077431E-18  1.683056E-17  4.200128E-18  1.389102E+01 -1.184412E-05 *
-                      * -8.077431E-18  4.937142E+01 -1.768920E-17 -1.389102E+01 -8.113443E-18  1.184412E-05 *
-                      *  1.683056E-17 -1.768920E-17  4.937142E+01  1.184412E-05 -1.184412E-05  3.913315E-18 *
-                      *  4.200128E-18 -1.389102E+01  1.184412E-05  6.035094E+00 -1.777846E-09 -4.396145E-06 *
-                      *  1.389102E+01 -8.113443E-18 -1.184412E-05 -1.777846E-09  6.035094E+00 -4.396145E-06 *
-                      * -1.184412E-05  1.184412E-05  3.913315E-18 -4.396145E-06 -4.396145E-06  1.258516E+00 *
+                      *  5.025436E+01 -8.077431E-18  1.683033E-17  4.200117E-18  1.400178E+01 -1.202707E-05 *
+                      * -8.077431E-18  5.025436E+01 -1.768939E-17 -1.400178E+01 -8.113455E-18  1.202707E-05 *
+                      *  1.683033E-17 -1.768939E-17  5.025436E+01  1.202707E-05 -1.202707E-05  3.913337E-18 *
+                      *  4.200117E-18 -1.400178E+01  1.202707E-05  6.100519E+00 -1.781089E-09 -4.469232E-06 *
+                      *  1.400178E+01 -8.113455E-18 -1.202707E-05 -1.781089E-09  6.100519E+00 -4.469232E-06 *
+                      * -1.202707E-05  1.202707E-05  3.913337E-18 -4.469232E-06 -4.469232E-06  1.280901E+00 *
 
 0                                    CHANGE WITH RESPECT TO G-SET RIGID BODY MASS/WEIGHT
                       *       0 %                                                                           *
@@ -390,22 +391,22 @@
                       *                                                 0 %                                 *
                       *                                                               0 %                   *
                       *                                                                             0 %     *
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    14
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    14
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
  *** USER INFORMATION MESSAGE 5010 (LNCILS)
      STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
-     TRIAL EIGENVALUE = 1.168517D+03, CYCLES = 5.440485D+00 THE STURM COUNT = 0
+     TRIAL EIGENVALUE = 1.371413D+03, CYCLES = 5.893921D+00 THE STURM COUNT = 0
  *** USER INFORMATION MESSAGE 5010 (LNCILS)
      STURM SEQUENCE DATA FOR EIGENVALUE EXTRACTION.
-     TRIAL EIGENVALUE = 8.053007D+05, CYCLES = 1.428233D+02 THE STURM COUNT = 12
+     TRIAL EIGENVALUE = 8.054719D+05, CYCLES = 1.428385D+02 THE STURM COUNT = 12
 
  TABLE OF SHIFTS:  (LNNRIGL)
  SHIFT #        SHIFT VALUE         FREQUENCY, CYCLES     # EIGENVALUES BELOW    # NEW EIGENVALUES FOUND
-     1.        1.1685167E+03          5.4404846E+00                 0                       12
-     2.        8.0530070E+05          1.4282333E+02                12                        2
+     1.        1.3714134E+03          5.8939212E+00                 0                       11
+     2.        8.0547190E+05          1.4283852E+02                12                        2
 
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    15
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    15
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
 0
@@ -423,40 +424,40 @@
 
                                      NUMBER OF SOLVES REQUIRED ............    23
 
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    16
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    16
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
  
                                               R E A L   E I G E N V A L U E S
    MODE    EXTRACTION      EIGENVALUE            RADIANS             CYCLES            GENERALIZED         GENERALIZED
     NO.       ORDER                                                                       MASS              STIFFNESS
-        1         1        3.354265E+05        5.791601E+02        9.217620E+01        1.000000E+00        3.354265E+05
-        2         2        3.354269E+05        5.791605E+02        9.217626E+01        1.000000E+00        3.354269E+05
-        3         3        3.562091E+05        5.968325E+02        9.498884E+01        1.000000E+00        3.562091E+05
-        4         4        3.929573E+05        6.268631E+02        9.976836E+01        1.000000E+00        3.929573E+05
-        5         5        6.123911E+05        7.825542E+02        1.245474E+02        1.000000E+00        6.123911E+05
-        6         6        6.146493E+05        7.839957E+02        1.247768E+02        1.000000E+00        6.146493E+05
-        7         7        6.146504E+05        7.839964E+02        1.247769E+02        1.000000E+00        6.146504E+05
-        8         8        6.222342E+05        7.888182E+02        1.255443E+02        1.000000E+00        6.222342E+05
-        9         9        7.317783E+05        8.554404E+02        1.361476E+02        1.000000E+00        7.317783E+05
-       10        10        7.370739E+05        8.585301E+02        1.366393E+02        1.000000E+00        7.370739E+05
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    17
+        1         1        3.660308E+05        6.050048E+02        9.628950E+01        1.000000E+00        3.660308E+05
+        2         2        3.910370E+05        6.253295E+02        9.952428E+01        1.000000E+00        3.910370E+05
+        3         3        3.910376E+05        6.253300E+02        9.952436E+01        1.000000E+00        3.910376E+05
+        4         4        3.940510E+05        6.277348E+02        9.990710E+01        1.000000E+00        3.940510E+05
+        5         5        6.123690E+05        7.825401E+02        1.245451E+02        1.000000E+00        6.123690E+05
+        6         6        6.151300E+05        7.843022E+02        1.248256E+02        1.000000E+00        6.151300E+05
+        7         7        6.151311E+05        7.843029E+02        1.248257E+02        1.000000E+00        6.151311E+05
+        8         8        6.225580E+05        7.890235E+02        1.255770E+02        1.000000E+00        6.225580E+05
+        9         9        7.318826E+05        8.555014E+02        1.361573E+02        1.000000E+00        7.318826E+05
+       10        10        7.378035E+05        8.589549E+02        1.367069E+02        1.000000E+00        7.378035E+05
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    17
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
 0                                                  MAXIMUM  DISPLACEMENTS   
   SUBCASE/
   DAREA ID        T1             T2             T3             R1             R2             R3
-0        1   3.7056815E-01  4.7416846E-02  8.6270029E-02  9.1019271E-01  3.9726179E+00  1.6510084E+00
-0        2   4.7415615E-02  3.7056940E-01  8.6268302E-02  3.9726424E+00  9.1074455E-01  1.6510169E+00
-0        3   7.2079894E-02  7.2075621E-02  2.2788382E-01  1.8004038E+00  1.8002180E+00  5.1941636E-01
-0        4   1.6111625E-01  1.6111606E-01  2.2759993E-01  2.6622911E+00  2.6623040E+00  1.0264733E+00
-0        5   8.7090244E-01  8.7115952E-01  4.9988000E-02  1.8201165E+01  1.8195683E+01  5.1229072E+00
-0        6   1.1585051E+00  1.8133729E-02  7.9792932E-02  4.7923587E+00  2.4498246E+01  6.9644509E+00
-0        7   1.8266131E-02  1.1586792E+00  7.9649363E-02  2.4501836E+01  4.7955514E+00  6.9655284E+00
-0        8   8.7775242E-01  8.7794695E-01  5.5195766E-02  1.8355178E+01  1.8351128E+01  5.2840423E+00
-0        9   8.7734925E-01  8.7737089E-01  4.2158567E-02  1.6137860E+01  1.6137514E+01  5.4095239E+00
-0       10   1.3209515E+00  3.6636094E-02  6.6760907E-02  4.1555238E+00  2.3556330E+01  8.2304611E+00
-1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   5, 2021  MSC Nastran  8/ 4/20   PAGE    18
+0        1   7.8314487E-02  7.8310408E-02  2.3091455E-01  1.8711945E+00  1.8709892E+00  5.6112806E-01
+0        2   4.2307843E-01  5.6335586E-02  9.0378364E-02  1.1713305E+00  5.2978896E+00  2.0917495E+00
+0        3   5.6337724E-02  4.2308447E-01  9.0384088E-02  5.2980087E+00  1.1720039E+00  2.0917870E+00
+0        4   1.6264597E-01  1.6264314E-01  2.3012636E-01  2.7001172E+00  2.7001185E+00  1.0355301E+00
+0        5   8.7052425E-01  8.7071753E-01  4.8589837E-02  1.8192832E+01  1.8188685E+01  5.1170208E+00
+0        6   1.1452750E+00  1.8015017E-02  7.8924720E-02  4.8031826E+00  2.4284354E+01  6.8975519E+00
+0        7   1.8130828E-02  1.1453579E+00  7.8777532E-02  2.4286207E+01  4.8060163E+00  6.8979851E+00
+0        8   8.7634034E-01  8.7653493E-01  5.3320450E-02  1.8330472E+01  1.8326417E+01  5.2752679E+00
+0        9   8.7547890E-01  8.7549197E-01  4.0949044E-02  1.6118063E+01  1.6117873E+01  5.3958930E+00
+0       10   1.3239601E+00  3.8213200E-02  6.5438136E-02  4.1581157E+00  2.3575672E+01  8.2446957E+00
+1    MSC.NASTRAN JOB CREATED ON 23-APR-21 AT 13:54:50   **STUDENT EDITION*     JUNE   6, 2021  MSC Nastran  8/ 4/20   PAGE    18
                                                                                                                                     
 0                                                                                                            SUBCASE 1              
  * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
