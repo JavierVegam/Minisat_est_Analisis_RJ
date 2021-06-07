@@ -1,0 +1,69 @@
+$# Session file patran.ses.01 started recording at 07-Jun-21 22:27:39
+$# Build: 26.0.758311 Tue Sep 15 10:33:18 PDT 2020
+$# Recorded by: Patran 2020  (Student Edition)
+uil_file_open.go( "C:\Users\javiv\Documents\GitHub\Minisat_est_Analisis_RJ" // @
+"\ENTREGA\Satelite_G11.db" )
+$# Database version 3.21 created by Patran 2020  (Student Edition) 
+$# successfully opened.
+$# Warning reported in application FILE by application Journal
+$#     Journal file 
+$# C:\Users\javiv\Documents\GitHub\Minisat_est_Analisis_RJ\ENTREGA\Satelite_G1
+$# 1.db.jou does not exist. No journal file will be created.
+$# FLEXlm initialization complete.  Acquiring license(s)...
+$# License File: EDU
+$# Patran 2020  (Student Edition) has obtained 0 concurrent license(s) from 
+$# FLEXlm per a request to execute on Windows node LAPTOP-53F8OSPS(
+$# 3c918028ba5b) (Windows 6.2 (Build 9200: Service Pack 0)) at 07-Jun-21 
+$# 22:27:40.
+$# Begin Reading RMB Menu definitions
+$# Done Reading RMB Menu definitions
+$# Loading dynamic library C:\Program 
+$# Files\MSC.Software\NaPa_SE\2020\Patran\bin\exe\loads_browser.dll
+$# @ÎÓI shared library 'Loads Browser', Version 2020, Revision 3, Patch 0, 
+$# has been loaded for: MSC.Patran.
+REAL mass_prop_mass_props_array(VIRTUAL)
+STRING mass_prop_entity_list[VIRTUAL]
+STRING mass_prop_reject_list[VIRTUAL]
+mass_prop.cleanup_detailed( mass_prop_mass_props_array, mass_prop_entity_list, @
+ mass_prop_reject_list )
+INTEGER mass_prop_noutputs
+STRING mass_prop_gnames_out[32](VIRTUAL)
+INTEGER mass_prop_entities(VIRTUAL)
+INTEGER mass_prop_entity_types(VIRTUAL)
+INTEGER mass_prop_len_elist
+INTEGER mass_prop_num_ents
+INTEGER mass_prop_len_rlist
+INTEGER mass_prop_num_rejects
+INTEGER mass_prop_segment_id
+INTEGER mass_prop_cord_label
+INTEGER mass_prop_user_cord_label
+mass_prop_create_detailed( "3D", "Group", "FEM", "Summary", 1, ["Satelite"],  @
+"", "Coord 0", "Use Element Properties", "Use Element Properties", "Coord 0",  @
+3, 1, FALSE, FALSE, mass_prop_noutputs, mass_prop_gnames_out,  @
+mass_prop_entities, mass_prop_entity_types, mass_prop_mass_props_array,  @
+mass_prop_entity_list, mass_prop_len_elist, mass_prop_num_ents,  @
+mass_prop_reject_list, mass_prop_len_rlist, mass_prop_num_rejects,  @
+mass_prop_segment_id, mass_prop_cord_label, mass_prop_user_cord_label )
+$# Warning reported from application MASP
+$#     Some of the referenced element properties define an offset.  All 
+$# offsets are ignored in the calculation of mass properties. This can cause 
+$# the results to change substantially.
+$# Warning reported from application MASP
+$#     The moment of inertia tensor has 2 equal eigenvalues, or principal 
+$# inertias, 2.192916, 2.192916, and 1.290966.  The choices of the 
+$# corresponding eigenvectors or principal directions is arbitrary and may 
+$# not be what you expected.
+$# Warning reported from application MASP
+$#     Some of the specified entities were excluded from the mass property 
+$# calculations because they have no material assigned to them in their 
+$# element property records.
+$# Warning reported from application MASP
+$#     Some of the specified entities were excluded from the mass property 
+$# calculations because some of their needed element properties are not found 
+$# or represented using data types that are supported by the Mass Properties.
+$# Warning reported from application MASP
+$#     The specified entities that were excluded because of the indicated 
+$# warning conditions are: Element 1:12
+uil_file_close.goquit(  )
+$# Flushing the User Data Manager
+$# Session file patran.ses.01 stopped recording at 07-Jun-21 22:28:32
